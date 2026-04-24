@@ -13,7 +13,7 @@ export default function ItemList({ items, onRefresh })  {
                 <div key={item._id} style={{border:'1px solid #ccc', padding:'1rem', marginBottom:'1rem'}}>
                     <h3>{item.name}</h3>
                     <p>{item.description}</p>
-                    <p><strong>Price:</strong></p>
+                    <p><strong>Price: ${item.price.toFixed(2)}</strong></p>
                     <button onClick={() => handleDelete(item._id)}>Delete</button>
                 </div>
             ))}
